@@ -32,7 +32,7 @@ class Zenburn(ColorScheme):
             if context.image:
                 fg = 109
             if context.video:
-                fg = 66
+                fg = 43
             if context.audio:
                 fg = 116
             if context.document:

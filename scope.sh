@@ -28,6 +28,7 @@ IFS=$'\n'
 ## 7    | image      | Display the file directly as an image
 
 ## Script arguments
+## FILE_PATH="${1}"         # Full path of the highlighted file
 FILE_PATH="${1}"         # Full path of the highlighted file
 PV_WIDTH="${2}"          # Width of the preview pane (number of fitting characters)
 ## shellcheck disable=SC2034 # PV_HEIGHT is provided for convenience and unused
@@ -40,8 +41,8 @@ FILE_EXTENSION_LOWER="$(printf "%s" "${FILE_EXTENSION}" | tr '[:upper:]' '[:lowe
 
 ## Settings
 HIGHLIGHT_SIZE_MAX=262143  # 256KiB
-HIGHLIGHT_TABWIDTH="${HIGHLIGHT_TABWIDTH:-8}"
-HIGHLIGHT_STYLE="${HIGHLIGHT_STYLE:-pablo}"
+HIGHLIGHT_TABWIDTH="${HIGHLIGHT_TABWIDTH:-2}"
+HIGHLIGHT_STYLE="${HIGHLIGHT_STYLE:-Zenburn}"
 HIGHLIGHT_OPTIONS="--replace-tabs=${HIGHLIGHT_TABWIDTH} --style=${HIGHLIGHT_STYLE} ${HIGHLIGHT_OPTIONS:-}"
 PYGMENTIZE_STYLE="${PYGMENTIZE_STYLE:-autumn}"
 OPENSCAD_IMGSIZE="${RNGR_OPENSCAD_IMGSIZE:-1000,1000}"
